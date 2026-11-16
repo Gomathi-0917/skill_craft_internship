@@ -1,0 +1,391 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #009b9b;
+    padding: 25px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Website */
+.landing-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #004f55;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 80px;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0, 47, 51, 0.88);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #76e4d8;
+    border-bottom-color: #76e4d8;
+}
+
+/* Search */
+.search {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 4px 12px;
+}
+
+.search input {
+    width: 140px;
+    min-width: 0;
+    padding: 9px 4px;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    border: none;
+    background: transparent;
+    color: #006d70;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.login {
+    background: #008b88;
+    padding: 12px 16px;
+    border-radius: 25px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hero Background */
+.hero {
+    position: relative;
+    min-height: 650px;
+    padding: 100px 35px 65px 100px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 35px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 60, 65, 0.82),
+            rgba(0, 60, 65, 0.42)
+        ),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+/* Social Icons */
+.social-links {
+    position: absolute;
+    left: 28px;
+    top: 48%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.social-links a {
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #72eadc;
+    transform: scale(1.2);
+}
+
+/* Main Heading */
+.intro {
+    border-left: 5px solid white;
+    padding-left: 25px;
+}
+
+.intro h1 {
+    font-size: clamp(34px, 4vw, 62px);
+    line-height: 1.18;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.intro h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1.5px white;
+}
+
+.intro p {
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    color: #e4f4f0;
+}
+
+/* Buttons */
+.book-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #008c88;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.book-button span {
+    margin-left: 12px;
+}
+
+.book-button:hover {
+    background: #00aaa0;
+    transform: translateY(-3px);
+}
+
+/* Destination Cards */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    align-items: stretch;
+}
+
+.destination-card {
+    min-width: 0;
+    background: #f7f8f5;
+    color: #203a3a;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-card img {
+    display: block;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px 14px;
+}
+
+.card-content h2 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #667776;
+    font-size: 12px;
+    line-height: 1.7;
+    min-height: 62px;
+    margin-bottom: 15px;
+}
+
+.read-button {
+    display: inline-block;
+    background: #006e68;
+    color: white;
+    padding: 10px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.read-button:hover {
+    background: #009d91;
+}
+
+/* Contact */
+.contact-section {
+    text-align: center;
+    padding: 65px 20px;
+    background: #eaf5ef;
+    color: #174e49;
+}
+
+.contact-section h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    margin-bottom: 12px;
+}
+
+.contact-section p {
+    margin-bottom: 22px;
+}
+
+footer {
+    padding: 22px;
+    background: #003b40;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 1050px) {
+    body {
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .search input {
+        width: 100px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 75px 45px 55px 75px;
+        gap: 45px;
+    }
+
+    .destination-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 0;
+    }
+
+    .navbar {
+        position: sticky;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .search {
+        flex: 1;
+        max-width: 180px;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .login {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 20px 45px 45px;
+        background-position: center;
+        gap: 40px;
+    }
+
+    .social-links {
+        left: 12px;
+        gap: 20px;
+    }
+
+    .social-links a {
+        font-size: 20px;
+    }
+
+    .intro {
+        padding-left: 18px;
+    }
+
+    .intro h1 {
+        font-size: clamp(32px, 9vw, 48px);
+    }
+
+    .intro p {
+        font-size: 13px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .destination-card img {
+        height: 220px;
+    }
+
+    .card-content {
+        padding: 22px;
+    }
+
+    .card-content p {
+        min-height: auto;
+    }
+}
